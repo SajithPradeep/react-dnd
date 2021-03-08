@@ -1,29 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 
-import products from "./data/products.json";
-import draggableProducts from "./data/draggableProducts.json";
+// import products from "./data/products.json";
+// import draggableProducts from "./data/draggableProducts.json";
 
-import GridTable from "./components/GridTable/GridTable";
-import DraggableList from "./components/DraggableList/DraggableList";
+import DragAndDropView from "./components/DragAndDropView/DragAndDropView";
+
+// import GridTable from "./components/GridTable/GridTable";
+// import DraggableList from "./components/DraggableList/DraggableList";
 
 function App() {
-  const [draggableProductsList] = useState([...draggableProducts]);
+  // const [draggableProductsList] = useState([...draggableProducts]);
 
-  const [productList, setProductList] = useState([...products]);
+  // const [productList, setProductList] = useState([...products]);
 
-  const onClickHandler = (product) => {
-    setProductList((prevState) => {
-      return [...prevState, product];
-    });
-  };
+  // const onClickHandler = (product) => {
+  //   setProductList((prevState) => {
+  //     return [...prevState, product];
+  //   });
+  // };
   return (
     <div className="App">
-      <DraggableList
-        products={draggableProductsList}
-        clickHandler={onClickHandler}
-      />
-      <GridTable products={productList} />
+      {/* <DraggableList
+      //   products={draggableProductsList}
+      //   clickHandler={onClickHandler}
+      // />
+      // <GridTable products={productList} /> */}
+      <DragAndDropView />
     </div>
   );
 }
