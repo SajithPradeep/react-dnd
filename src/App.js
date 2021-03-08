@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+import products from "./data/products.json";
+import draggableProducts from "./data/draggableProducts.json";
+
+import GridTable from "./components/GridTable/GridTable";
+import DraggableList from "./components/DraggableList/DraggableList";
 
 function App() {
+  const [draggableProductsList] = useState([...draggableProducts]);
+
+  const [productList, setProductList] = useState([...products]);
+
+  const onClickHandler = (product) => {
+    setProductList((prevState) => {
+      return [...prevState, product];
+    });
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DraggableList
+        products={draggableProductsList}
+        clickHandler={onClickHandler}
+      />
+      <GridTable products={productList} />
     </div>
   );
 }

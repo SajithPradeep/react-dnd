@@ -1,0 +1,35 @@
+[
+    {
+        "ProductID" : 8,
+        "ProductName" : "Northwoods Cranberry Sauce",
+        "SupplierID" : 3,
+        "CategoryID" : 2,
+        "QuantityPerUnit" : "12 - 12 oz jars",
+        "UnitPrice" : 40.0000,
+        "UnitsInStock" : 6,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : false,
+        "Category" : {
+            "CategoryID" : 2,
+            "CategoryName" : "Condiments",
+            "Description" : "Sweet and savory sauces, relishes, spreads, and seasonings"
+        }
+    }, {
+        "ProductID" : 9,
+        "ProductName" : "Mishi Kobe Niku",
+        "SupplierID" : 4,
+        "CategoryID" : 6,
+        "QuantityPerUnit" : "18 - 500 g pkgs.",
+        "UnitPrice" : 97.0000,
+        "UnitsInStock" : 29,
+        "UnitsOnOrder" : 0,
+        "ReorderLevel" : 0,
+        "Discontinued" : true,
+        "Category" : {
+            "CategoryID" : 6,
+            "CategoryName" : "Meat/Poultry",
+            "Description" : "Prepared meats"
+        }
+    }
+  ]

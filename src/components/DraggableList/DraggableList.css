@@ -1,0 +1,26 @@
+.draggable-list {
+  border: 1px solid;
+  padding: 1rem;
+}
+
+.card {
+  display: flex;
+  border: 1px solid silver;
+  padding: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card.card-heading {
+  padding-bottom: 0.3rem;
+  border: none;
+  border-bottom: 1px solid salmon;
+}
+
+.draggable-list .card .card-id {
+  width: 30px;
+}
+.draggable-list .card .card-name {
+  margin-left: 1rem;
+}
